@@ -97,14 +97,14 @@ try {
         $mail->SMTPDebug = 1; // debug mod: 1  olması faydali, hata varsa gosterir.
         $mail->SMTPAuth = true;
         $mail->SMTPSecure = 'tls';
-        $mail->Host = "mail.etutsoldaniki.com"; // Hosting hesabinizda ki domaininiz, mail.siteadresiniz.com gibi kullanin.
+        $mail->Host = ""; // Hosting hesabinizda ki domaininiz, mail.siteadresiniz.com gibi kullanin.
         $mail->Port = 587;
         $mail->IsHTML(true);
         $mail->SetLanguage("tr", "phpmailer/language");
         $mail->CharSet = "utf-8";
-        $mail->Username = "podcast@etutsoldaniki.com"; // Hosting hesabinizda actiginiz mail adresi
-        $mail->Password = "podcast1234podcast"; // mail adresi sifresi
-        $mail->SetFrom("podcast@etutsoldaniki.com", "IEEE-IUC PODCAST"); // Mail attigimizda yazacak isim
+        $mail->Username = ""; // Hosting hesabinizda actiginiz mail adresi
+        $mail->Password = ""; // mail adresi sifresi
+        $mail->SetFrom("", ""); // Mail attigimizda yazacak isim
         $mail->AddAddress($email); // Maili gonderecegimiz kisi/ alici
         $mail->Subject = "Forgot Password"; // Konu basligi
         $mail->Body = "Podcast Şifreniz :" . $result["User_password"]; // Mailin icerigi
