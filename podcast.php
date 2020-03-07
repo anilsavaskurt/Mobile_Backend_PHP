@@ -143,8 +143,7 @@ try {
                 $update = $pdo->prepare("UPDATE UserList SET User_password=:new_pass WHERE User_email =:email ");
                 $update->bindParam(":new_pass", $new_password1, PDO::PARAM_STR);
                 $update->bindParam(":email", $email, PDO::PARAM_STR);
-                $update->execute();
-                $process = $query->execute();
+                $process = $update->execute();
 
                 if (!$process) {
                     $output = createOutput('true', 'Bir Hata Oluştu', []);
